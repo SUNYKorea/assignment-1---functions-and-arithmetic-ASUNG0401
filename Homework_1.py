@@ -1,5 +1,5 @@
-# Name:
-# SBUID: 
+# Name:SeongWoo Kim
+# SBUID: 115944486
 
 # Remove the ellipses (...) when writing your solutions.
 
@@ -8,39 +8,73 @@
 # TODO: Complete the implementation of fahrenheit2celsius () and what_to_wear(). 
 
 def fahrenheit2celsius(fahrenheit): 
-   ...
+     
+     return (5/9) *(fahrenheit - 32)  
+
+
 
 def what_to_wear(celsius):
-   ...
+    
+    if celsius < -10:
+        print("wear_Puffy_jacket")
+    elif celsius < 0 and celsius >= -10:
+        print("wear_Scarf")
+    elif celsius < 10 and celsius >= 0:
+        print("wear_Sweater ")
+    elif celsius < 20 and celsius >= 10:
+        print("wear_Light jacket")
+    else: 
+        print("wear_T-shirt")
 
 # ---------------------------- Exercise II --------------------------------------
 # ----------------- Area and perimeter of a triangle  ---------------------------
 # TODO: Fill the functions shoelace_triangle_area, euclidean_distance and
 # compute_triangle_perimeter from scratch  
 
+x1, x2, x3, y1, y2, y3 = -4, -5, 3, -4, 5, -3
+
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
-    ...
+
+
+    return abs(((x1 * y2 + x2 * y3 + x3 * y1) - (x1 * y3 + x2 * y1 + x3 * y2)) / 2)
+
 
 def euclidean_distance(x1, y1, x2, y2):
-    ...
+
+    return ((x1-x2)**2 +(y1-y2)**2)**0.5
 
 def compute_triangle_perimeter(x1, y1, x2, y2, x3, y3):
-    ...
+    s1 = euclidean_distance(x1, y1, x2, y2)
+    s2 = euclidean_distance(x2, y2, x3, y3)
+    s3 = euclidean_distance(x3, y3, x1, y1)
+    return s1 + s2 + s3
+
 
 
 # ---------------------------- Exercise III -------------------------------------
 # ----------------- Compute the area of a regular polygon -----------------------
 # TODO: Fill the functions deg2rad, apothem  and polygon_area 
 
+number_sides = 5
+length_side = 4
 
 def deg2rad(deg):
-    ...
+
+    import math 
+    pi = math.pi
+
+    rad = deg * (pi / 180)
+    return rad
 
 def apothem(number_sides, length_side):
-   ...
+   import math
+   tan = math.tan
+   apothem = length_side / (2 * tan(deg2rad(180/number_sides)))
+   return apothem
 
 def polygon_area(number_sides, length_side):
-   ...
+   polygon_area = (number_sides * length_side * apothem(number_sides, length_side)) / 2
+   return polygon_area
 
 
 # ---------------------------- Test -------------------------------------
