@@ -1,6 +1,8 @@
 # Name:SeongWoo Kim
 # SBUID: 115944486
-
+##################### SCORE ######################
+####### good work  9.5/10
+#################################################
 # Remove the ellipses (...) when writing your solutions.
 
 # ---------------------------- Exercise I ---------------------------------------
@@ -36,7 +38,7 @@ x1, x2, x3, y1, y2, y3 = -4, -5, 3, -4, 5, -3
 def shoelace_triangle_area(x1, y1, x2, y2, x3, y3):
 
 
-    return abs(((x1 * y2 + x2 * y3 + x3 * y1) - (x1 * y3 + x2 * y1 + x3 * y2)) / 2)
+    return abs(((x1 * y2 + x2 * y3 + x3 * y1) - (x1 * y3 + x2 * y1 + x3 * y2)) / 2)  # please use variables to store equation values instead of directly returing the entire equation - use concepts of variables taught in class - its a good coding practice
 
 
 def euclidean_distance(x1, y1, x2, y2):
@@ -67,9 +69,9 @@ def deg2rad(deg):
     return rad
 
 def apothem(number_sides, length_side):
-   import math
+   import math   # import statements should be declared on the top not within a function
    tan = math.tan
-   apothem = length_side / (2 * tan(deg2rad(180/number_sides)))
+   apothem = length_side / (2 * tan(deg2rad(180/number_sides)))  
    return apothem
 
 def polygon_area(number_sides, length_side):
